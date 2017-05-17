@@ -10,7 +10,7 @@ module EndiciaLabelServer
       end
 
       def post_field
-        'BuyPostageRequestXML'
+        'recreditRequestXML'
       end
     end
   end
