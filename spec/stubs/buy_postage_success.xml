@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RecreditRequestResponse>
+  <Status>0</Status>
+  <ErrorMessage></ErrorMessage>
+  <RequesterID>123</RequesterID>
+  <RequestID>123</RequestID>
+  <CertifiedIntermediary>
+    <AccountID>1000000</AccountID>
+    <SerialNumber>1</SerialNumber>
+    <PostageBalance>5.00</PostageBalance>
+    <AscendingBalance>5.00</AscendingBalance>
+    <AccountStatus>A</AccountStatus>
+    <DeviceID>123456789012</DeviceID>
+    <ReferenceID>asdf</ReferenceID>
+  </CertifiedIntermediary>
+  <TransactionID>1.00</TransactionID>
+  <ControlRegister>1.00</ControlRegister>
+</RecreditRequestResponse>

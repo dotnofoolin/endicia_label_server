@@ -17,8 +17,8 @@ module EndiciaLabelServer
 
     attr_accessor :url
 
-    TEST_URL = 'https://LabelServer.Endicia.com'
-    LIVE_URL = 'https://LabelServer.Endicia.com'
+    TEST_URL = 'https://elstestserver.endicia.com'
+    LIVE_URL = 'https://labelserver.endicia.com'
     ROOT_PATH = '/LabelService/EwsLabelService.asmx/'
 
     GET_POSTAGE_LABEL_ENDPOINT = 'GetPostageLabelXML'
@@ -26,6 +26,7 @@ module EndiciaLabelServer
     REQUEST_RATES_ENDPOINT = 'CalculatePostageRatesXML'
     GET_USER_SIGNUP_ENDPOINT = 'GetUserSignUpXML'
     CHANGE_PASS_PHRASE_ENDPOINT = 'ChangePassPhraseXML'
+    BUY_POSTAGE_ENDPOINT = 'BuyPostageXML'
 
     DEFAULT_PARAMS = {
       test_mode: false
@@ -68,6 +69,11 @@ module EndiciaLabelServer
     def change_pass_phrase(builder = nil, &block)
       builder_proxy(builder, CHANGE_PASS_PHRASE_ENDPOINT,
                     ChangePassPhraseBuilder, ChangePassPhraseParser, block)
+    end
+
+    def buy_postage(builder = nil, &block)
+      builder_proxy(builder, BUY_POSTAGE_ENDPOINT,
+                    BuyPostageBuilder, BuyPostageParser, block)
     end
 
     private
